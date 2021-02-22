@@ -25,6 +25,11 @@ $folderAddList = @() # folders where $identity was added
 $xml = @() # previous ACL before $identity is added to ACL
 $regex = "*" + $identity + "*" # to be used with Where command
 
+#remove .csv files from last run
+if( Test-Path .\globalErrors-NeedsFullCtrl.csv ){rm .\globalErrors-NeedsFullCtrl.csv}
+if( Test-Path .\global-NeedsFullCtrl.csv ){rm .\global-NeedsFullCtrl.csv}
+if( Test-Path .\addUserGlobalErrors.csv ){rm .\addUserGlobalErrors.csv}
+
 ForEach( $subFolder in $subFolderList ) {
     CLEAR
     
