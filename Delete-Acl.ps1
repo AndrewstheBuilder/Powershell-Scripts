@@ -1,9 +1,7 @@
 ﻿# Run as admin
-# Make sure correct token privileges are enabled check enabled tokens. Check by running command 'whoami /priv'
-# To enable all token privilieges run my script Enable-AllPriv.ps1
 # Check current directory -> make sure the .csv files that are appended to in this script are not there
 #
-# \\smb01.unfcsd.unf.edu\global
+# Remove CREATOR OWNERS and SIDs from Folders
 #
 #
 
