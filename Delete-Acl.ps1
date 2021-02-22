@@ -15,6 +15,11 @@ $GlobalXML = @() # array of XMl objects -> XML objects are backups of ACL before
 $SubPaths = Get-ChildItem -LiteralPath $RootPath -Directory 
 $SubFolderList = $SubPaths.FullName
 
+#remove .csv files from last run
+if(Test-Path .\global2.csv) {rm .\global2.csv}
+if(Test-Path .\globalErrors2.csv) {rm .\globalErrors2.csv}
+if(Test-Path .\removeUserGlobalErrors2.csv) {rm .\removeUserGlobalErrors2.csv}
+
 ForEach( $SubFolder in $SubFolderList ) {
     CLEAR
 
