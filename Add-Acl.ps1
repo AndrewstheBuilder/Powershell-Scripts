@@ -75,7 +75,7 @@ ForEach( $subFolder in $subFolderList ) {
 
 
 
-<# Add User
+# Add User
 CLEAR
 $importedCsv = Import-Csv .\global-NeedsFullCtrl.csv
 foreach( $line in $importedCsv ) {
